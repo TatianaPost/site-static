@@ -1,0 +1,211 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova Black Italic"), local("Proxima-Nova-Black-Italic"),
+    url("./ProximaNova/ProximaNova-BlackIt.woff2") format("woff2"),
+    url("./ProximaNova/ProximaNova-BlackIt.woff") format("woff"),
+    url("./ProximaNova/ProximaNova-BlackIt.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+*,
+*:after,
+*::before {
+  /* margin: 0 auto;
+  padding: 0; */
+  box-sizing: border-box;
+}
+body {
+  background: #070506 url("img/main-bg.png") left no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1060px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 90px;
+}
+.header__logo {
+  margin-right: 70px;
+}
+.hero__subtitle {
+  font-family: "Proxima Nova", sans-serif;
+  display: block;
+  margin-top: 78px;
+  font-size: 40px;
+  line-height: 100%;
+}
+.hero__title {
+  font-family: "Proxima Nova", sans-serif;
+  margin-top: 5px;
+  font-size: 64px;
+  line-height: 78px;
+  margin-bottom: 25px;
+}
+.hero__description {
+  font-size: 18px;
+  line-height: 150%;
+  max-width: 572px;
+}
+.hero__premier {
+  font-size: 18px;
+  line-height: 150%;
+  color: #b02000;
+}
+.hero__date {
+  display: block;
+  font-size: 24px;
+  line-height: 150%;
+  margin-bottom: 46px;
+}
+.hero__button {
+  position: relative;
+  font-size: 14px;
+  color: #fff;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  padding: 25px 34px;
+  padding-right: 80px;
+  background: linear-gradient(90deg, #fb641a 0%, #fc3309 100%);
+  border-radius: 300px;
+}
+.hero__button:after {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  content: "";
+  width: 65px;
+  height: 65px;
+  background: #fff url("img//button.svg") center no-repeat;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  background-image: ;
+}
+.hero__button:before {
+  position: absolute;
+  content: "";
+  width: 81px;
+  height: 81px;
+  background: rgba(255, 255, 255, 0.3);
+  right: -8px;
+  top: -8px;
+  border-radius: 50%;
+}
+.nav__link {
+  text-decoration-line: none;
+  color: #fff;
+  margin-right: 15px;
+  transition: all 0.6s ease;
+  transition: font-size 0.7s ease-out;
+}
+.nav__link:hover {
+  font-size: 17px;
+  cursor: pointer;
+  color: #fc3309;
+}
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+}
+.slider__item {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  min-height: 220px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+.slider__item:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(80, 80, 80, 0.86);
+  box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.25);
+  z-index: -1;
+}
+.slider__item:hover {
+  background: rgba(64, 101, 255, 0.86);
+  cursor: pointer;
+}
+.slider__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.star {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("/img/star.svg") center no-repeat;
+}
+.star-o {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("/img/staro.svg") center no-repeat;
+}
+.slider__nav--left {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent url("/img/left-arrow.png") center no-repeat;
+  margin-right: 10px;
+  cursor: pointer;
+  outline: none;
+}
+.slider__nav--right {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent url("/img/right-arrow.png") center no-repeat;
+  cursor: pointer;
+  outline: none;
+}
+.slider__nav--left span,
+.slider__nav--right span {
+  display: none;
+}
+.episodes__title {
+  margin-top: 60px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 150%;
+}
+@media (max-width: 600px) {
+  .hero__subtitle {
+    margin-top: 20px;
+    font-style: 24px;
+  }
+  .hero__title {
+    font-size: 36px;
+    line-height: 120%;
+  }
+  .hero__description {
+    font-size: 16px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header__logo {
+    margin-bottom: 30px;
+  }
+}
